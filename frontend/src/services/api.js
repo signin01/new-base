@@ -1,7 +1,10 @@
 ﻿import axios from 'axios';
 
+// Use environment variable or fallback to Render backend URL
+const API_URL = process.env.REACT_APP_API_URL || 'https://collabflow-backend-4hgv.onrender.com/api';
+
 const API = axios.create({
-  baseURL: 'http://localhost:5000/api',
+  baseURL: API_URL,
   withCredentials: true,
 });
 
